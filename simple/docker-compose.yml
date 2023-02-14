@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 services:
   db:
     image: postgres:14
@@ -20,10 +20,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.40'
+          cpus: "0.40"
           memory: 256M
         reservations:
-          cpus: '0.15'
+          cpus: "0.15"
           memory: 128M
 
   redis:
@@ -38,10 +38,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.20'
+          cpus: "0.20"
           memory: 96M
         reservations:
-          cpus: '0.05'
+          cpus: "0.05"
           memory: 64M
 
   ehrbase:
@@ -85,14 +85,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.50'
+          cpus: "0.50"
           memory: 4096M
         reservations:
-          cpus: '0.25'
+          cpus: "0.25"
           memory: 2048M
 
   fhir-bridge:
-    image: numresearchdataplatform/num-fhir-bridge:latest
+    image: numresearchdataplatform/num-fhir-bridge:1.5.5-22-PR
     volumes:
       - ./fhir-bridge/conf:/fhir-bridge/conf:ro
     environment:
@@ -114,8 +114,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.50'
+          cpus: "0.50"
           memory: 4096M
         reservations:
-          cpus: '0.25'
+          cpus: "0.25"
           memory: 2048M
